@@ -1,1 +1,1 @@
-console.log("Furtasma JS loaded...");
+window.alert("Javascript loaded!");
