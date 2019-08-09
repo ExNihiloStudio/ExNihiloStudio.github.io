@@ -4,3 +4,11 @@ html
   color:white;
   font-size:18px;
 }
+button
+{
+	background-color:black;
+	color:white;
+	font-size:18px;
+	border:solid;
+	border-color:white;
+}
