@@ -17,7 +17,8 @@ button
 }
 .titleDiv
 {
-	flex:top;
+	flex:1;
+	flex-grow:1;
 	top:0px;
 	left:0px;
 	width:100%;
@@ -39,6 +40,6 @@ button
 .MainContent
 {
 	overflow-y:scroll;
-	flex:1;
+	flex-grow:1;
 	height:100%;
 }
