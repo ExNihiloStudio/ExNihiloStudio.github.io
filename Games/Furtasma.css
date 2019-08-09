@@ -7,6 +7,10 @@ html
 	width:calc(100vw - 35px);
 	display:flex;
 }
+h1
+{
+   text-size:80px;
+}
 button
 {
 	background-color:black;
