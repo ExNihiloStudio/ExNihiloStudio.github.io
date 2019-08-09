@@ -3,7 +3,7 @@ html
   background-color:black;
   color:white;
   font-size:18px;
-	height:calc(100vh - 10px);
+	height:calc(100vh - 25px);
 	width:calc(100vw - 35px);
 	display:flex;
 }
