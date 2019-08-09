@@ -4,7 +4,7 @@ html
   color:white;
   font-size:18px;
 	height:100vh;
-	width:100%;
+	width:100vw;
 	display:flex;
 }
 button
@@ -31,7 +31,7 @@ button
 	top:50px;
 	right:0px;
 	width:200px;
-	hight:100%;
+	hight:calc(100vh-100px);
 	overflow-y:scroll;
 	
 	background-color:blue;
@@ -41,5 +41,5 @@ button
 	overflow-y:scroll;
 	flex-basis:100%;
 	width:100%;
-	height:100%;
+	height:calc(100vh-100px);
 }
