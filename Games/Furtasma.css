@@ -31,15 +31,17 @@ button
 	top:50px;
 	right:0px;
 	width:200px;
-	hight:100%;
+	hight:100vh;
 	float:right;
+	overflow-y:scroll;
 	
 	background-color:blue;
 }
 .MainContent
 {
-	float:left
+	overflow-y:scroll;
+	float:left;
 	flex:left;
 	width:100%;
-	height:100%;
+	height:100vh;
 }
