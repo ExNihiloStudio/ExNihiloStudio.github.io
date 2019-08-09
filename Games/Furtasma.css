@@ -31,7 +31,7 @@ button
 	top:50px;
 	right:0px;
 	width:200px;
-	hight:calc(100vh - 100px);
+	hight:calc(100vh - 120px);
 	overflow-y:scroll;
 	
 	background-color:blue;
@@ -41,5 +41,5 @@ button
 	overflow-y:scroll;
 	flex-basis:100%;
 	width:100%;
-	height:calc(100vh - 100px);
+	height:calc(100vh - 120px);
 }
