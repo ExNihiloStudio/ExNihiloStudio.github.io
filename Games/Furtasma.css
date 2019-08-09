@@ -19,7 +19,7 @@ button
 	top:0px;
 	left:0px;
 	width:100%;
-	height:50px;
+	height:100px;
 	
 	background-color:red;
 }
@@ -28,7 +28,7 @@ button
 	position:fixed;
 	top:50px;
 	right:0px;
-	width:100px;
+	width:200px;
 	hight:calc(100vh-50px);
 	
 	background-color:blue;
