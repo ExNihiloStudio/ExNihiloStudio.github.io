@@ -31,8 +31,7 @@ button
 	top:50px;
 	right:0px;
 	width:200px;
-	hight:100vh;
-	float:right;
+	hight:100%;
 	overflow-y:scroll;
 	
 	background-color:blue;
@@ -40,8 +39,6 @@ button
 .MainContent
 {
 	overflow-y:scroll;
-	float:left;
-	flex:left;
-	width:calc(100%-200px);
-	height:100vh;
+	flex:1;
+	height:100%;
 }
