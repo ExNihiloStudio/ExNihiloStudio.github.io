@@ -4,6 +4,7 @@ html
   color:white;
   font-size:18px;
 	height:100vh;
+	width:100%
 	display:flex;
 }
 button
@@ -31,7 +32,7 @@ button
 	right:0px;
 	width:200px;
 	hight:100%;
-	float:right
+	float:right;
 	
 	background-color:blue;
 }
