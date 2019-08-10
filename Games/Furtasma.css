@@ -21,7 +21,7 @@ button
 {
 	top:0px;
 	left:0px;
-	width:calc(100vw - 45px);
+	width:calc(100vw - 50px);
 	height:100px;
 	flex-basis:100%;
         border-bottom-style: solid;
@@ -33,7 +33,7 @@ button
 	top:50px;
 	right:0px;
 	width:200px;
-	hight:calc(100vh - 145px);
+	hight:calc(100vh - 155px);
 	overflow-y:scroll;
         border-left-style: solid;
         border-left-color:white;
@@ -43,5 +43,5 @@ button
 	overflow-y:scroll;
 	flex-basis:100%;
 	width:100%;
-	height:calc(100vh - 145px);
+	height:calc(100vh - 155px);
 }
