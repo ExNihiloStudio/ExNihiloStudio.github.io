@@ -34,7 +34,6 @@ button
 	right:0px;
 	width:200px;
 	hight:calc(100vh - 165px);
-	overflow-y:scroll;
         border-left-style: solid;
         border-left-color:white;
 }
