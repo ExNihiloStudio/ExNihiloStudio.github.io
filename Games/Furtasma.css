@@ -3,6 +3,8 @@ html
   background-color:black;
   color:white;
   font-size:18px;
+        border-bottom-style:solid;
+        border-bottom-color:white;
 	height:calc(100vh - 25px);
 	width:calc(100vw - 35px);
 	display:flex;
