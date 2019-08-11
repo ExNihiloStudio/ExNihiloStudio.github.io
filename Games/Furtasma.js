@@ -1,5 +1,5 @@
 console.log("Furtasma Javascript loaded...");
-
+var test = confirm("doobily");
 
 
 function MAIN()
