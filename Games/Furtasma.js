@@ -9,8 +9,6 @@ function MAIN()
       document.getElementById("MainText").innerHTML = "too young";
       window.location.href = 'https://exnihilostudio.github.io/';
    }
-   else
-   {
-      document.getElementById("MainText").innerHTML = "Welcome!";
-   }
+      document.getElementById("MainText").innerHTML = "Welcome to Furtasma!";
+   
 }
