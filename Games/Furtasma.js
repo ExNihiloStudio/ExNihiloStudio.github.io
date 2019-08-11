@@ -36,6 +36,9 @@ function MAIN()
    }
       SetText("Welcome to Furtasma!");
 
-      var test = new Page({text:"So, this is a way to test the page system"});
+      var test = new Page
+      ({
+         text:"So, this is a way to test the page system"
+      });
       test.load();
 }
