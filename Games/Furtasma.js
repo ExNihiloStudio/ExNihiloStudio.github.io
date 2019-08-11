@@ -11,6 +11,6 @@ function MAIN()
    }
    else
    {
-      document.getElementById("MainText").innerHTML = "doobilyjam";
+      document.getElementById("MainText").innerHTML = "Welcome!";
    }
 }
