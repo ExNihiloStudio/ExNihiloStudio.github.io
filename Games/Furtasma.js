@@ -8,4 +8,8 @@ function MAIN()
    {
       document.getElementById("MainText").innerHTML = "Of age!";
    }
+   else
+   {
+      document.getElementById("MainText").innerHTML = "Too young!";
+   }
 }
