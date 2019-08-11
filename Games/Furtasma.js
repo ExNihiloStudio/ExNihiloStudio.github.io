@@ -12,7 +12,6 @@ class Page
    constructor(params)
    {
       this.title = null;
-      this.link = null;
       this.text = null;
       this.actions = null;
       this.special = null;
@@ -25,6 +24,15 @@ class Page
    load()
    {
       SetText(this.text);
+   }
+}
+
+class action
+{
+   constructor(params)
+   {
+      this.special = null;
+      this.link = null;
    }
 }
 
