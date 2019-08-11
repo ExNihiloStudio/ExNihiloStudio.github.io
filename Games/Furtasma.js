@@ -6,4 +6,3 @@ function MAIN()
 {
   document.getElementById("MainText").innerHTML = "testerooniedoonie";
 }
-MAIN();
