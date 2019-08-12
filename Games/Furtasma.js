@@ -34,7 +34,7 @@ class Page
          var btn = document.createElement("BUTTON");
          btn.innerHTML = act;
          btn.onClick = actions[act].click;
-         document.getElementById("optionsContainer").appendChild(btn);
+         //document.getElementById("optionsContainer").appendChild(btn);
       }
    }
 }
@@ -59,8 +59,8 @@ class action
 }
 
 Scenario.pages =
-   {test1:new Page({text:"this is test 1!",actions:[new action({link:"test2"})]}),
-    test2:new Page({text:"this is test 2!",actions:[new action({link:"test1"})]})};
+   {test1: new Page({text:"this is test 1!",actions:{test1: new action({link:"test2"})}}),
+    test2: new Page({text:"this is test 2!",actions:{test2: new action({link:"test1"})}})};
 
 
 function MAIN()
@@ -69,7 +69,7 @@ function MAIN()
    {
       window.location.href = 'https://exnihilostudio.github.io/';
    }
-      SetText("Welcome to Furtasma! Test 2 failed.");
+      SetText("Welcome to Furtasma! Test 3 failed.");
 
       Scenario.pages["test1"].load();
 }
