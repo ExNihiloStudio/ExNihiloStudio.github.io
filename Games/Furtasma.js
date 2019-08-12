@@ -37,7 +37,7 @@ class Page
          
          var atc = this.actions[key];
          
-         btn.addEventListener('click',Scenario.pages[act.link].load,false);
+         btn.addEventListener('click',Scenario.pages[atc.link].load,false);
          document.getElementById("optionsContainer").appendChild(btn);
       }
    }
@@ -61,7 +61,7 @@ Scenario.pages =
    {
       START: new Page
          ({
-           text:"This is the start test to see if it'll load in any of the text at all. Also, this is test what, 12?",
+           text:"This is the start test to see if it'll load in any of the text at all. Also, this is test what, 13?",
            actions:
             {
                'First Page':new action({link:'First Page'})
