@@ -58,12 +58,10 @@ class action
    }
 }
 
-Scenario =
-{
-   pages:
+Scenario.pages =
    {test1:new Page({text:"this is test 1!",actions:[new action({link:"test2"})]}),
-    test2:new Page({text:"this is test 2!",actions:[new action({link:"test1"})]})}
-}
+    test2:new Page({text:"this is test 2!",actions:[new action({link:"test1"})]})};
+
 
 function MAIN()
 {
@@ -71,7 +69,7 @@ function MAIN()
    {
       window.location.href = 'https://exnihilostudio.github.io/';
    }
-      SetText("Welcome to Furtasma! Test failed.");
+      SetText("Welcome to Furtasma! Test 2 failed.");
 
       Scenario.pages["test1"].load();
 }
