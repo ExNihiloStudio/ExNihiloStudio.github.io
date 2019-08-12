@@ -49,7 +49,7 @@ button
 {
 	flex-grow:1;
 	flex-shrink: 1;
-	width:50%;
+	width:100%;
 	height:40px;
 	min-height:40px;
 	max-height:40px;
