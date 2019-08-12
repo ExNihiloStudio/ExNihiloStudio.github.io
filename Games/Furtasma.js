@@ -34,7 +34,7 @@ class Page
          var btn = document.createElement("BUTTON");
          btn.innerHTML = key;
          btn.class = "ActionButton";
-         btn.onclick = function(){this.actions[key].click();};
+         btn.onclick = this.actions[key].click;
          document.getElementById("optionsContainer").appendChild(btn);
       }
    }
