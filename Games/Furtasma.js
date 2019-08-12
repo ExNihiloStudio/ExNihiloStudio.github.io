@@ -59,8 +59,13 @@ class action
 }
 
 Scenario.pages =
-   {test1: new Page({text:"this is test 1!",actions:{test1: new action({link:"test2"})}}),
-    test2: new Page({text:"this is test 2!",actions:{test2: new action({link:"test1"})}})};
+   {
+      START: new Page
+         ({
+           text:"This is the start test to see if it'll load in any of the text at all." 
+         })
+   }
+   
 
 
 function MAIN()
@@ -71,5 +76,5 @@ function MAIN()
    }
       SetText("Welcome to Furtasma! Test 3 failed.");
 
-      Scenario.pages["test1"].load();
+      Scenario.pages["START"].load();
 }
