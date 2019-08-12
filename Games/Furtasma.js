@@ -29,12 +29,12 @@ class Page
       SetText(this.text);
 
       document.getElementById("optionsContainer").innerHTML = "";
-      for(var act in this.actions)
+      for(var key in this.actions)
       {
          var btn = document.createElement("BUTTON");
-         btn.innerHTML = act;
+         btn.innerHTML = key;
          btn.class = "ActionButton";
-         btn.onclick = this.actions[act].click;
+         btn.onclick = function(){this.actions[key].click();};
          document.getElementById("optionsContainer").appendChild(btn);
       }
    }
