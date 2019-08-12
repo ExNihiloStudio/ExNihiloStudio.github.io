@@ -51,4 +51,6 @@ button
 	flex-shrink: 1;
 	width:50%;
 	height:40px;
+	min-height:40px;
+	max-height:40px;
 }
