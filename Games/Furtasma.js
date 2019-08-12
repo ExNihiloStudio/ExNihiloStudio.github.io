@@ -34,7 +34,14 @@ class Page
          var btn = document.createElement("BUTTON");
          btn.innerHTML = key;
          btn.className = "ActionButton";
-         btn.onclick = this.actions[key].click;
+         
+         var atc = this.actions[key];
+         
+         btn.onclick = function()
+         {
+              if(atc.special != null){atc.special();}
+              if(atc.link != null){Scenario.pages[atc.link].load();}
+         }
          document.getElementById("optionsContainer").appendChild(btn);
       }
    }
@@ -52,18 +59,13 @@ class action
          this[key] = params[key];
       }
    }
-   click()
-   {
-      if(this.special != null){this.special();}
-      if(this.link != null){Scenario.pages[this.link].load();}
-   }
 }
 
 Scenario.pages =
    {
       START: new Page
          ({
-           text:"This is the start test to see if it'll load in any of the text at all. Also, this is test what, 6?",
+           text:"This is the start test to see if it'll load in any of the text at all. Also, this is test what, 7?",
            actions:
             {
                'First Page':new action({link:'First Page'})
