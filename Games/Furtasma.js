@@ -1,4 +1,4 @@
-console.log("Furtasma Javascript loaded...");
+console.log("Furtasma Javascript loading...");
 
 function SetText(text)
 {
@@ -62,9 +62,21 @@ Scenario.pages =
    {
       START: new Page
          ({
-           text:"This is the start test to see if it'll load in any of the text at all." 
+           text:"This is the start test to see if it'll load in any of the text at all.",
+           actions:
+            {
+               First_Page:new action({link:"First_Page"})
+            }
+         }),
+      First_Page: new Page
+         ({
+            text:"this is the first page! that means that things worked and actually functions as intended",
+            actions:
+            {
+               Back:new action({link:"START"})
+            }
          })
-   }
+   };
    
 
 
@@ -78,3 +90,5 @@ function MAIN()
 
       Scenario.pages["START"].load();
 }
+
+console.log("Furtasma Javascript loaded...");
