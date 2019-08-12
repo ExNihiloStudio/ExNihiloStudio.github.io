@@ -44,3 +44,11 @@ button
 	width:100%;
 	height:calc(100vh - 165px);
 }
+
+.ActionButton
+{
+	flex-grow:1;
+	flex-shrink: 1;
+	width:50%;
+	height:40px;
+}
