@@ -39,8 +39,8 @@ class Page
          
          btn.onclick = function()
          {
-              if(atc.special != null){atc.special();}
-              if(atc.link != null){Scenario.pages[atc.link].load();}
+              if(this.actions[key].special != null){this.actions[key].special();}
+              if(this.actions[key].link != null){Scenario.pages[this.actions[key].link].load();}
          }
          document.getElementById("optionsContainer").appendChild(btn);
       }
@@ -65,7 +65,7 @@ Scenario.pages =
    {
       START: new Page
          ({
-           text:"This is the start test to see if it'll load in any of the text at all. Also, this is test what, 8?",
+           text:"This is the start test to see if it'll load in any of the text at all. Also, this is test what, 9?",
            actions:
             {
                'First Page':new action({link:'First Page'})
