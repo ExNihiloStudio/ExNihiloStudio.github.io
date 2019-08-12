@@ -33,7 +33,7 @@ class Page
       {
          var btn = document.createElement("BUTTON");
          btn.innerHTML = key;
-         btn.class = "ActionButton";
+         btn.className = "ActionButton";
          btn.onclick = this.actions[key].click;
          document.getElementById("optionsContainer").appendChild(btn);
       }
@@ -63,7 +63,7 @@ Scenario.pages =
    {
       START: new Page
          ({
-           text:"This is the start test to see if it'll load in any of the text at all.",
+           text:"This is the start test to see if it'll load in any of the text at all. Also, this is test what, 6?",
            actions:
             {
                'First Page':new action({link:'First Page'})
