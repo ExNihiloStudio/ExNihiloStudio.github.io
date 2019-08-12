@@ -25,16 +25,16 @@ class Page
    }
    load()
    {
-      if(special != null){special();}
+      if(this.special != null){this.special();}
       SetText(this.text);
 
       document.getElementById("optionsContainer").innerHTML = "";
-      for(var act in actions)
+      for(var act in this.actions)
       {
          var btn = document.createElement("BUTTON");
          btn.innerHTML = act;
-         btn.onClick = actions[act].click;
-         //document.getElementById("optionsContainer").appendChild(btn);
+         btn.onClick = this.actions[act].click;
+         document.getElementById("optionsContainer").appendChild(btn);
       }
    }
 }
@@ -53,8 +53,8 @@ class action
    }
    click()
    {
-      if(special != null){special();}
-      if(link != null){Scenario.pages[link].load();}
+      if(this.special != null){this.special();}
+      if(this.link != null){Scenario.pages[this.link].load();}
    }
 }
 
@@ -74,7 +74,7 @@ function MAIN()
    {
       window.location.href = 'https://exnihilostudio.github.io/';
    }
-      SetText("Welcome to Furtasma! Test 4 failed.");
+      SetText("Welcome to Furtasma! Test 5 failed.");
 
       Scenario.pages["START"].load();
 }
