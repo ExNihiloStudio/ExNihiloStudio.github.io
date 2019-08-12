@@ -10,6 +10,80 @@ var Scenario =
    pages:null
 };
 
+var genders = 
+    {
+       male:
+       {
+         they:"he",
+         them:"him",
+         their:"his",
+         theirs:"his",
+         name:"male",
+         type:"masculine"
+       },
+      female:
+       {
+         they:"she",
+         them:"her",
+         their:"her",
+         theirs:"hers",
+         name:"female",
+         type:"femanine"
+       },
+      femherm:
+       {
+         they:"shi",
+         them:"hir",
+         their:"hir",
+         theirs:"hirs",
+         name:"femherm",
+         type:"femhermine"
+       },
+      maleherm:
+       {
+         they:"hi",
+         them:"hem",
+         their:"hiz",
+         theirs:"hiz",
+         name:"maleherm",
+         type:"malehermine"
+       },
+      gynomorph:
+       {
+         they:"she",
+         them:"her",
+         their:"her",
+         theirs:"hers",
+         name:"gynomorph",
+         type:"femanine"
+       },
+      andromorph:
+       {
+         they:"he",
+         them:"him",
+         their:"his",
+         theirs:"his",
+         name:"andromorph",
+         type:"masculine"
+       }
+    }
+
+var species = 
+    {
+      human:
+       {
+          type:"humanoid",
+          name:"human"
+       }
+    }
+
+var player =
+    {
+      name:"Test Player",
+      gender:genders.male,
+      species:species.human,
+    }
+
 class Page
 {
    constructor(params)
@@ -63,7 +137,7 @@ Scenario.pages =
    {
       START: new Page
          ({
-           text:"This is the start test to see if it'll load in any of the text at all. Also, this is test what, 14?",
+           text:"This is the start test to see if it'll load in any of the text at all. Also, this is test what, 15?",
            actions:
             {
                'First Page':new action({link:'First Page'})
@@ -80,7 +154,7 @@ Scenario.pages =
          }),
       'test 2': new Page
          ({
-           text:"This is jnust for mroe testing and I really don't care about all the bad spelling things",
+           text:"This is jnust for mroe testing and I really don't care about all the bad spelling things, "+player.name+", you are a "+player.gender.name+" "+player.species.name+" aren't you?",
            actions:
            {
              Back:new action({link:"First Page"}),
