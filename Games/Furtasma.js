@@ -33,7 +33,7 @@ class Page
       {
          var btn = document.createElement("BUTTON");
          btn.innerHTML = act;
-         btn.onClick = this.actions[act].click;
+         btn.onclick = this.actions[act].click;
          document.getElementById("optionsContainer").appendChild(btn);
       }
    }
