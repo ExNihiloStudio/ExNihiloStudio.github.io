@@ -5,9 +5,10 @@ function SetText(text)
    document.getElementById("MainText").innerHTML = text;
 }
 
-var Scenario = null;
-
-
+var Scenario = 
+{
+   pages:null
+};
 
 class Page
 {
