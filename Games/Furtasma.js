@@ -5,13 +5,12 @@ function SetText(text)
    document.getElementById("MainText").innerHTML = text;
 }
 
-var scenario = {}
+var Scenario = null;
 
 class Page
 {
    constructor(params)
    {
-      this.title = null;
       this.text = null;
       this.actions = null;
       this.special = null;
@@ -23,7 +22,16 @@ class Page
    }
    load()
    {
+      if(special != null){special();}
       SetText(this.text);
+
+      document.getElementById("optionsContainer").innerHTML = "";
+      for(var act in actions)
+      {
+         var btn = document.createElement("BUTTON");
+         btn.innerHTML = act;
+         btn.onClick = actions[act].click;
+      }
    }
 }
 
@@ -33,7 +41,24 @@ class action
    {
       this.special = null;
       this.link = null;
+
+      for(var key in params)
+      {
+         this[key] = params[key];
+      }
    }
+   click()
+   {
+      if(special != null){special();}
+      if(link != null){Scenario.pages[link].load();}
+   }
+}
+
+Scenario =
+{
+   pages:
+   {test1:new Page({text:"this is test 1!",actions:[new action({link:"test2"})]}),
+    test2:new Page({text:"this is test 2!",actions:[new action({link:"test1"})]})}
 }
 
 function MAIN()
