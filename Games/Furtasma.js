@@ -31,7 +31,7 @@ class Page
          var btn = document.createElement("BUTTON");
          btn.innerHTML = act;
          btn.onClick = actions[act].click;
-         document.getElementById("optionsContainer").appendChild(btn);
+         //document.getElementById("optionsContainer").appendChild(btn);
       }
    }
 }
