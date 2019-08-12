@@ -65,7 +65,7 @@ Scenario.pages =
    {
       START: new Page
          ({
-           text:"This is the start test to see if it'll load in any of the text at all. Also, this is test what, 7?",
+           text:"This is the start test to see if it'll load in any of the text at all. Also, this is test what, 8?",
            actions:
             {
                'First Page':new action({link:'First Page'})
@@ -76,8 +76,18 @@ Scenario.pages =
             text:"this is the first page! that means that things worked and actually functions as intended",
             actions:
             {
-               Back:new action({link:"START"})
+               Back:new action({link:"START"}),
+               Tester:new action({link:"test 2"})
             }
+         }),
+      'test 2': new Page
+         ({
+           text:"This is jnust for mroe testing and I really don't care about all the bad spelling things",
+           actions:
+           {
+             Back:new action({link:"First Page"}),
+             flarf:new action({link:"START"})
+           }
          })
    };
    
