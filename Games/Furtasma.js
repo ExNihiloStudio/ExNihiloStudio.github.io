@@ -7,6 +7,8 @@ function SetText(text)
 
 var Scenario = null;
 
+
+
 class Page
 {
    constructor(params)
@@ -31,7 +33,7 @@ class Page
          var btn = document.createElement("BUTTON");
          btn.innerHTML = act;
          btn.onClick = actions[act].click;
-         //document.getElementById("optionsContainer").appendChild(btn);
+         document.getElementById("optionsContainer").appendChild(btn);
       }
    }
 }
@@ -70,9 +72,5 @@ function MAIN()
    }
       SetText("Welcome to Furtasma!");
 
-      var test = new Page
-      ({
-         text:"So, this is a way to test the page system"
-      });
-      test.load();
+      Scenario.pages["test1"].load();
 }
