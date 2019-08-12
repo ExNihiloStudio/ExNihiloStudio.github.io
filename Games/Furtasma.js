@@ -74,7 +74,7 @@ function MAIN()
    {
       window.location.href = 'https://exnihilostudio.github.io/';
    }
-      SetText("Welcome to Furtasma! Test 3 failed.");
+      SetText("Welcome to Furtasma! Test 4 failed.");
 
       Scenario.pages["START"].load();
 }
