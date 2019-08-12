@@ -37,12 +37,14 @@ class Page
          
          var atc = this.actions[key];
          
-         btn.addEventListener('click',Scenario.pages[atc.link].load,false);
+         btn.id = atc.link;
+         
+         btn.addEventListener('click',this.actions[key].special,false);
+         btn.addEventListener('click',function(){Scenario.pages[this.id].load();},false);
          document.getElementById("optionsContainer").appendChild(btn);
       }
    }
 }
-
 class action
 {
    constructor(params)
