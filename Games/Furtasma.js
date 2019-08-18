@@ -105,16 +105,8 @@ class Page
       document.getElementById("optionsContainer").innerHTML = "";
       for(var key in this.actions)
       {
-         var btn = document.createElement("BUTTON");
+         var btn = this.actions[key];
          btn.innerHTML = key;
-         btn.className = "ActionButton";
-         
-         var atc = this.actions[key];
-         
-         btn.id = atc.link;
-         
-         btn.addEventListener('click',this.actions[key].special,false);
-         btn.addEventListener('click',function(){Scenario.pages[this.id].load();},false);
          document.getElementById("optionsContainer").appendChild(btn);
       }
    }
@@ -129,6 +121,15 @@ class action
       for(var key in params)
       {
          this[key] = params[key];
+      }
+
+      this.btn = document.createElement("BUTTON");
+      this.btn.className = "ActionButton";
+      
+      this.onClick = function()
+      {
+         if(this.special != null){this.special();}
+         Scenario[this.link].load();
       }
    }
 }
