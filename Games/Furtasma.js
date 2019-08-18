@@ -105,7 +105,7 @@ class Page
       document.getElementById("optionsContainer").innerHTML = "";
       for(var key in this.actions)
       {
-         var btn = this.actions[key];
+         var btn = this.actions[key].btn;
          btn.innerHTML = key;
          document.getElementById("optionsContainer").appendChild(btn);
       }
