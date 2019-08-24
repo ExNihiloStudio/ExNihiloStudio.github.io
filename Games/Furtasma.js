@@ -126,7 +126,7 @@ class action
       this.btn = document.createElement("BUTTON");
       this.btn.className = "ActionButton";
       
-      this.onClick = function()
+      this.btn.onClick = function()
       {
          if(this.special != null){this.special();}
          Scenario[this.link].load();
