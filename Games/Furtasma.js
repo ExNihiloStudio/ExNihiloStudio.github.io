@@ -121,16 +121,17 @@ class action
       for(var key in params)
       {
          this[key] = params[key];
-      }
+      };
 
       this.btn = document.createElement("BUTTON");
       this.btn.className = "ActionButton";
       
-      this.btn.onClick = function()
+      this.click = function()
       {
          if(this.special != null){this.special();}
          Scenario[this.link].load();
-      }
+      };
+      this.btn.onClick = this.click;
    }
 }
 
