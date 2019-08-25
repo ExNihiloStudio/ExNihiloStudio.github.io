@@ -108,6 +108,11 @@ class Page
          var btn = this.actions[key].btn;
          btn.innerHTML = key;
          document.getElementById("optionsContainer").appendChild(btn);
+         btn.onclick = function()
+         {
+            if(this.special != null){this.special();}
+            Scenario[this.link].load();
+         }
       }
    }
 }
@@ -129,15 +134,7 @@ class action
          this.btn[key] = params[key];
       };
 
-      
       this.btn.className = "ActionButton";
-      
-      this.btn.onClick = function()
-      {
-         btnhndlr(this);
-         if(this.special != null){this.special();}
-         Scenario[this.link].load();
-      }
    }
 }
 
@@ -145,7 +142,7 @@ Scenario.pages =
    {
       START: new Page
          ({
-           text:"This is the start test to see if it'll load in any of the text at all. Also, this is test what, 22?",
+           text:"This is the start test to see if it'll load in any of the text at all. Also, this is test what, 23?",
            actions:
             {
                'First Page':new action({link:'First Page'})
