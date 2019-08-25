@@ -5,6 +5,15 @@ function SetText(text)
    document.getElementById("MainText").innerHTML = text;
 }
 
+btnhndlr = (event) =>
+{
+   let special = event.target.getAttribute("special");
+   let link = event.target.getAttribute("link");
+
+   if(special != null){special();}
+   Scenario[link].load();
+}
+
 var Scenario = 
 {
    pages:null
@@ -108,17 +117,11 @@ class Page
          var btn = this.actions[key].btn;
          btn.innerHTML = key;
          document.getElementById("optionsContainer").appendChild(btn);
+         btn.addEventHandler("click", btnhndlr, false);
       }
    }
 }
-btnhndlr = (event) =>
-{
-   let special = event.target.getAttribute("special");
-   let link = event.target.getAttribute("link");
 
-   if(special != null){special();}
-   Scenario[link].load();
-}
 class action
 {
    constructor(params)
@@ -141,7 +144,7 @@ Scenario.pages =
    {
       START: new Page
          ({
-           text:"This is the start test to see if it'll load in any of the text at all. Also, this is test what, 24?",
+           text:"This is the start test to see if it'll load in any of the text at all. Also, this is test what, 25?",
            actions:
             {
                'First Page':new action({link:'First Page'})
