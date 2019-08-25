@@ -132,7 +132,7 @@ class action
       for(var key in params)
       {
          if(key == "link"){this.btn.id = params[key];}
-         if(key == "special"){this.btn.onClick = params[key];}
+         if(key == "special"){this.btn.onclick = params[key];}
       };
 
       this.btn.className = "ActionButton";
@@ -143,7 +143,7 @@ Scenario.pages =
    {
       START: new Page
          ({
-           text:"This is the start test to see if it'll load in any of the text at all. Also, this is test what, 30?",
+           text:"This is the start test to see if it'll load in any of the text at all. Also, this is test what, 31?",
            actions:
             {
                'First Page':new action({link:'First Page'})
