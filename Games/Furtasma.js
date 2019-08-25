@@ -132,7 +132,7 @@ class action
       
       this.btn.className = "ActionButton";
       
-      this.btn.onclick = function(){btnhndlr(this);}
+      this.btn.onClick = function(){btnhndlr(this);}
    }
 }
 
