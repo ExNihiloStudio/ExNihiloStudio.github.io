@@ -111,28 +111,28 @@ class Page
       }
    }
 }
+function btnhndlr(btn)
+{
+   if(btn.special != null){btn.special();}
+   Scenario[btn.link].load();
+}
 class action
 {
    constructor(params)
    {
-      this.special = null;
-      this.link = null;
+      this.btn = document.createElement("BUTTON");
+      this.btn.special = null;
+      this.btn.link = null;
 
       for(var key in params)
       {
-         this[key] = params[key];
+         this.btn[key] = params[key];
       };
 
-      this.btn = document.createElement("BUTTON");
+      
       this.btn.className = "ActionButton";
       
-      this.click = function()
-      {
-         if(this.special != null){this.special();}
-         Scenario[this.link].load();
-      }
-
-      this.btn.addEventListener("click", this.click);
+      this.btn.onclick = function(){btnhndlr(this);}
    }
 }
 
