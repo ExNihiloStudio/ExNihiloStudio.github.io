@@ -137,7 +137,6 @@ class action
       };
 
       this.btn.className = "ActionButton";
-      this.btn.onClick = btnhndlr;
    }
 }
 
@@ -145,7 +144,7 @@ Scenario.pages =
    {
       START: new Page
          ({
-           text:"This is the start test to see if it'll load in any of the text at all. Also, this is test what, 27?",
+           text:"This is the start test to see if it'll load in any of the text at all. Also, this is test what, 28?",
            actions:
             {
                'First Page':new action({link:'First Page'})
