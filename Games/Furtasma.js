@@ -117,7 +117,8 @@ class Page
          var btn = this.actions[key].btn;
          btn.innerHTML = key;
          document.getElementById("optionsContainer").appendChild(btn);
-         btn.addEventHandler("click", btnhndlr, false);
+         btn.addEventHandler("click", function(){if(this.special != null){this.special();}, false);
+         btn.addEventHandler("click", function(){Scenario[this.link].load();}, false);
       }
    }
 }
@@ -144,7 +145,7 @@ Scenario.pages =
    {
       START: new Page
          ({
-           text:"This is the start test to see if it'll load in any of the text at all. Also, this is test what, 25?",
+           text:"This is the start test to see if it'll load in any of the text at all. Also, this is test what, 26?",
            actions:
             {
                'First Page':new action({link:'First Page'})
