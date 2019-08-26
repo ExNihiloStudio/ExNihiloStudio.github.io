@@ -114,8 +114,9 @@ class Page
       document.getElementById("optionsContainer").innerHTML = "";
       for(var key in this.actions)
       {
-         var btn = this.actions[key].btn;
+         var btn = document.createElement("BUTTON");
          btn.innerHTML = key;
+         btn.id = this.actions[key].link;
          //btn.addEventHandler("click", function(){if(this.special != null){this.special();}, false);
          btn.addEventHandler("click", function(){Scenario[this.id].load();}, false);
          document.getElementById("optionsContainer").appendChild(btn);
@@ -127,15 +128,13 @@ class action
 {
    constructor(params)
    {
-      this.btn = document.createElement("BUTTON");
+      this.link = null;
+      this.special = null;
 
       for(var key in params)
       {
-         if(key == "link"){this.btn.id = params[key];}
-         if(key == "special"){this.btn.onclick = params[key];}
-      };
-
-      this.btn.className = "ActionButton";
+         this[key] = params[key];
+      }
    }
 }
 
@@ -143,7 +142,7 @@ Scenario.pages =
    {
       START: new Page
          ({
-           text:"This is the start test to see if it'll load in any of the text at all. Also, this is test what, 31?",
+           text:"This is the start test to see if it'll load in any of the text at all. Also, this is test what, 32?",
            actions:
             {
                'First Page':new action({link:'First Page'})
