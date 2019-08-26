@@ -114,12 +114,13 @@ class Page
       document.getElementById("optionsContainer").innerHTML = "";
       for(var key in this.actions)
       {
-         var btn = document.createElement("BUTTON");
+         //var btn = document.createElement("BUTTON");
+         var btn = this.actions[key].btn;
          btn.innerHTML = key;
-         btn.id = this.actions[key].link;
-         btn.className = "ActionButton";
+         //btn.id = this.actions[key].link;
+         //btn.className = "ActionButton";
          //btn.addEventHandler("click", function(){if(this.special != null){this.special();}, false);
-         btn.addEventListener("click", function(){console.log(this); Scenario[this.id].load();}, false);
+         //btn.addEventListener("click", function(){console.log(this); Scenario[this.id].load();}, false);
          document.getElementById("optionsContainer").appendChild(btn);
       }
    }
@@ -129,13 +130,15 @@ class action
 {
    constructor(params)
    {
-      this.link = null;
-      this.special = null;
-
+      this.btn = document.createElement("BUTTON");
+      this.btn.special = null;
+      this.btn.link = null;
+      this.btn.className = "ActionButton";
       for(var key in params)
       {
-         this[key] = params[key];
+         this.btn[key] = params[key];
       }
+      this.btn.addEventListener("click",function(){if(this.special != null){this.special();} Scenario.pages[this.link].load();}, false);
    }
 }
 
@@ -143,7 +146,7 @@ Scenario.pages =
    {
       START: new Page
          ({
-           text:"This is the start test to see if it'll load in any of the text at all. Also, this is test what, 36?",
+           text:"This is the start test to see if it'll load in any of the text at all. Also, this is test what, 37?",
            actions:
             {
                'First Page':new action({link:'First Page'})
