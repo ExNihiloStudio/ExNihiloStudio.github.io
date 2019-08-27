@@ -5,18 +5,10 @@ function SetText(text)
    document.getElementById("MainText").innerHTML = text;
 }
 
-btnhndlr = (event) =>
-{
-   let special = event.target.getAttribute("special");
-   let link = event.target.getAttribute("link");
-
-   if(special != null){special();}
-   Scenario[link].load();
-}
-
 var Scenario = 
 {
-   pages:null
+   pages:null,
+   vars: null
 };
 
 var genders = 
@@ -50,7 +42,7 @@ var genders =
        },
       maleherm:
        {
-         they:"hi",
+         they:"hie",
          them:"hem",
          their:"hiz",
          theirs:"hiz",
