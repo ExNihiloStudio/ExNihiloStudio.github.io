@@ -114,13 +114,8 @@ class Page
       document.getElementById("optionsContainer").innerHTML = "";
       for(var key in this.actions)
       {
-         //var btn = document.createElement("BUTTON");
          var btn = this.actions[key].btn;
          btn.innerHTML = key;
-         //btn.id = this.actions[key].link;
-         //btn.className = "ActionButton";
-         //btn.addEventHandler("click", function(){if(this.special != null){this.special();}, false);
-         //btn.addEventListener("click", function(){console.log(this); Scenario[this.id].load();}, false);
          document.getElementById("optionsContainer").appendChild(btn);
       }
    }
@@ -146,10 +141,10 @@ Scenario.pages =
    {
       START: new Page
          ({
-           text:"This is the start test to see if it'll load in any of the text at all. Also, this is test what, 37?",
+           text:"This is the start test to see if it'll load in any of the text at all. Also, this is test what, 38?",
            actions:
             {
-               'First Page':new action({link:'First Page'})
+               'First Page':new action({link:'First Page', special: function(){alert("test!");}})
             }
          }),
       'First Page': new Page
