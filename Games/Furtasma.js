@@ -133,10 +133,10 @@ Scenario.pages =
    {
       START: new Page
          ({
-           text:"This is the start test to see if it'll load in any of the text at all. Also, this is test what, 38?",
+           text:"Welcome to Furtasma! First we shall learn more about you shall we? Given that we can't load a character yet, so you'll have to make a new one for now.",
            actions:
             {
-               'First Page':new action({link:'First Page', special: function(){alert("test!");}})
+               'Enter':new action({link:'First Page'})
             }
          }),
       'First Page': new Page
